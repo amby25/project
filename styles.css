@@ -1,0 +1,297 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  background: #e6e6e6;
+}
+
+
+.control {
+  font-size: 18px;
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #666666;
+
+  /*background: #e6e6e6*/    
+}
+
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+
+
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+  background: #2aa1c0;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #0e647d;
+}
+
+
+/* Check mark */
+.control__indicator:after {
+  position: absolute;
+  display: none;
+  content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+  top: 4px;
+  left: 8px;
+  width: 3px;
+  height: 8px;
+  transform: rotate(45deg);
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+}
+
+/* Radio button inner circle */
+.control--radio .control__indicator:after {
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+
+
+.type label
+
+{
+background-color:#00cccc;
+padding: 5px 12px;
+}
+.type input[type=radio]
+{
+display:none;
+}
+.type input[type=radio]:checked + label
+{
+background-color:#0066cc;
+}
+
+
+h1
+{
+font-family: 'Oswald', sans-serif;
+font-size: 30px;
+text-transform: uppercase;
+color: #216182;
+}
+
+
+.container{
+ width: 600px;
+ margin: auto;
+ border: 3px solid #00cccc;
+ display: block;
+
+
+padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+
+
+
+ font-family: Helvetica;
+
+ background-color: #ffffff; 
+
+}
+
+
+
+.customRadiobutton input[type="radio"]{
+  display:  none;
+}
+
+.cutomRadiobuttonForm input[type="radio"] + label {
+
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+  line-height: 20px;
+}
+.customRadiobuttonForm input[type="radio"] + label:before{
+   
+   content: '';
+
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #34495e;
+  cursor: pointer;
+}
+.customRadiobuttonForm input[type="radio"]:checked + label:after {
+
+  content: '';
+    
+   width: 10px;
+   height: 10px;
+   background-color: #ecf01;
+   border-radius: 50%;
+   display: inline-block;
+   position: absolute;
+   left: 5;
+   top: 5; 
+
+}
+/* css for title   */
+body
+
+.select {
+  position: relative;
+  display: inline-block;
+  width: 430px;
+  margin-top-bottom: 15px;
+}
+
+
+.select select {
+  
+  width:455px;
+  height:45px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #7b7b7b;
+
+  border:1px solid #dedede;
+
+
+  border-radius: 0;
+  outline: 0;
+  background: #e6e6e6;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #000;
+  background: #efefef;
+}
+
+.select__arrow {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-width: 8px 5px 0 5px;
+  border-style: solid;
+  
+  border-color: #7b7b7b transparent transparent transparent;
+
+}
+
+.form label 
+{
+    display:block;
+    margin-top:10px;
+    letter-spacing:1px;
+}
+
+
+/* Styles the text boxes */
+.form input, textarea, file {
+  width:439px;
+  height:27px;
+  background-color:#efefef;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border:1px solid #dedede;
+  padding:10px;
+  margin-top:3px;
+  font-size:0.9em;
+  color:#3a3a3a;
+}
+
+  input:focus, textarea:focus {
+    border:1px solid #97d6eb;
+  }
+
+/* Styles the input boxes  */  
+.form textarea 
+{
+  height:213px;
+  background-color: #efefef;
+}
+
+
+
+/* Styles the submit button */
+#submit {
+  /* background:url(images/submit.png); */
+  width:127px;
+  height:48px;
+  text-align: center;
+  /* text-indent:-9999px; */
+  border:none;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+/* Styles the submit hover */ 
+#submit:hover {
+  color:#fff;
+  background-color: #00cccc;
+  opacity:0.9;
+}
+
