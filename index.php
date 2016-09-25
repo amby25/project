@@ -103,15 +103,7 @@ $rows = $database->resultset();
 </form>
 
 
-<h1>Posts</h1>
-<div>
-<?php foreach($rows as $row) : ?>
-  <div>
-    <h3><?php echo $row['services']; ?></h3>
-    <p><?php echo $row['type']; ?></p>
-    <p><?php echo $row['title']; ?></p>
-    <p><?php echo $row['name']; ?></p> 
-  </div>
-<?php endforeach; ?>
-</div>
+
+
 </body>
+  </html>
